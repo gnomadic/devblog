@@ -40,7 +40,7 @@ const first_paragraph = WritingService.RequestIntro({
  * as well as in "time" and "priorities".
  *
  */
-// TODO dig into "costs" data model and implications, learningCurve isn't the right abstraction here, track #issue-1
+// TODO dig into "costs" data model and implications, learningCurve isn't the right abstraction here, track #issue-2
 const second_paragraph = WritingService.RequestContext({
   projectType: project.creative,
   learningCurve: onboardingCost.high,
