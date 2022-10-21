@@ -20,10 +20,8 @@ function main() {
  *
  */
 const first_paragraph = WritingService.RequestIntro({
-  careerSkill: skilltype.soft,
-  skillTree: soft.collaboration,
-  skill: soft.collaboration.ridealong,
-  approach: value.tool,
+  careerSkill: SkillType.People.Collaboration.Ridealong,
+  valueAdd: ValueAdd.tool,
   displayName: "Using metaphors to guide discussions",
 });
 
@@ -33,7 +31,8 @@ const first_paragraph = WritingService.RequestIntro({
  *
  * Bringing everyone along for the ride is a skill that is
  * most impactful on highly creative and highly risky R&D style
- * projects.  These projects are often highly technical and
+ * projects, however it will be appreciated on all projects.
+ * Engineering projects are often highly technical and
  * have an associated complexity that is difficult to communicate.
  * As such, the onboarding cost for new team members is high.
  * This cost is paid in "mental energy" (which requires a clear mind for focus)
