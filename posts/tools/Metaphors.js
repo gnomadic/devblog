@@ -12,7 +12,7 @@ function main() {
 /**
  * Welcome the reader with human english, this post is about:
  *
- * the soft skill for people management focused on collaboration
+ * the soft skill for people management focused on collaboration.
  * More specifically tactical thoughts and information on how to
  * bring everyone along for the ride.
  *
@@ -20,9 +20,10 @@ function main() {
  *
  */
 const first_paragraph = WritingService.RequestIntro({
-  careerSkill: SkillType.People.Collaboration.Ridealong,
+  careerSkill: SkillType.People.Collaboration,
   valueAdd: ValueAdd.tool,
-  displayName: "Using metaphors to guide discussions",
+  displayName:
+    "Using metaphors to guide discussions, even when they fall apart.",
 });
 
 /**
@@ -30,8 +31,7 @@ const first_paragraph = WritingService.RequestIntro({
  * specific context of when this skill is most valuable.
  *
  * Bringing everyone along for the ride is a skill that is
- * most impactful on highly creative and highly risky R&D style
- * projects, however it will be appreciated on all projects.
+ * appreciated on all projects.
  * Engineering projects are often highly technical and
  * have an associated complexity that is difficult to communicate.
  * As such, the onboarding cost for new team members is high.
@@ -41,12 +41,19 @@ const first_paragraph = WritingService.RequestIntro({
  */
 // TODO dig into "costs" data model and implications, learningCurve isn't the right abstraction here, track #issue-2
 const second_paragraph = WritingService.RequestContext({
-  projectType: project.creative,
   learningCurve: onboardingCost.high,
 });
 
 /**
  * In the third paragraph we will bring up metaphors as a tool.
+ *
+ * Metaphors are great for explaining technical concepts.
+ * It frames concepts in a way that is easy to understand,
+ * leveraging what people know.
+ *
+ * Depending on the metaphor and the actual concept to explain,
+ * the metaphor can be stretched and fall apart with certain nuances
+ * of the new work.
  */
 const third_paragraph = WritingService.RequestParagraph({
   topic: "Metaphors",
@@ -60,9 +67,14 @@ const third_paragraph = WritingService.RequestParagraph({
 
 /**
  * In the fourth paragraph we discuss embracing where metaphors fall apart,
- * because if we are working in entirely new domains then someday we will
+ * because if we are working in new domains then someday we will
  * be the metaphor other people use.  Today, unfortunately, there no metaphors for what
  * we are trying to accomplish.
+ *
+ * A Metaphor can get your team 80% of the way there, but it is important to
+ * understand the 20% that is missing.  What's great about using metaphors,
+ * is how even when they fail to align with the new work they will expose the differences
+ * and can help guide the conversation to focus on the net-new additions or paradigms.
  *
  * @dev: Remember the days of elevator pitches like 'oh it's an uber for cats'?
  * Now everyone knows about the product "Catsatrophe" and uses it as a metaphor.
@@ -70,7 +82,7 @@ const third_paragraph = WritingService.RequestParagraph({
 const fourth_paragraph = WritingService.RequestParagraph({
   topic: "Stretching Metaphors",
   intro:
-    "Especially on R&D projecs, there will be new concepts and not many existing parallels.",
+    "On a new project, there will be new concepts and not many existing parallels so a metaphor will fall apart because of the nuance.",
   thesis:
     "Use inflection points where the metaphor is stretched to guide discussion towards the nuance and implications of the new work.",
 });
@@ -84,7 +96,7 @@ const fourth_paragraph = WritingService.RequestParagraph({
  */
 const fifth_paragraph = WritingService.RequestInsightfulConclusion({
   deepness: level.very_deep,
-  skill: soft.collaboration.ridealong,
+  careerSkill: SkillType.People.Collaboration,
   topics: ["Metaphors", "Stretching Metaphors"],
 });
 
